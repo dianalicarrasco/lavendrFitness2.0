@@ -1,13 +1,13 @@
 import React, { Fragment, useEffect, useState } from "react";
-// import ChangeSet from "./ChangeSet";
+// import ChangeIt from "./ChangeIt";
 
 const ListExercise = () => {
 
     const [exercise, setExercise] = useState([]);
 
-    // const [setcount, setSetCount] = useState();
+    // const [setcount, setSetCount] = useState(0);
 
-    // const [repcount, setRepCount] = useState();
+    // const [repcount, setRepCount] = useState(0);
 
     const deleteExercise = async (id) => {
         try {
@@ -35,6 +35,23 @@ const ListExercise = () => {
         getExercise();
     }, [])
 
+
+
+    // const setSet = async (id) => {
+    //     try {
+    //         const body = { setcount }
+    //         const reponse = await fetch(`http://localhost:3001/custom/${id}`, {
+    //             method: "PUT",
+    //             headers: {
+    //                 "Content-Type": "application/json"
+    //             },
+    //             body: JSON.stringify(body)
+    //         })
+    //     } catch (err) {
+    //         console.log(err.message)
+    //     }
+    // }
+
     return (
         <Fragment>
             <h5>My Workout</h5>
@@ -44,12 +61,13 @@ const ListExercise = () => {
                         <tr key={ex.exercise_id}>
                             <td>{ex.description} </td>
                             <td>{ex.sets} sets
-                                {/* <ChangeSet ex={ex} /> */}
-                                {/* <ChangeValue></ChangeValue> */}
+                                {/* <ChangeIt ex={ex} />  */}
+                                {/* <button onClick={setSet(ex.exercise_id)}>+</button>
+                                <button onClick={() => setSetCount(setcount - 1)}>-</button> */}
                             </td>
                             <td>{ex.reps} reps
-                                {/* <ChangeSet ex={ex}/> */}
-                                {/* <ChangeValue></ChangeValue> */}
+                                {/* <ChangeIt ex={ex}/>  */}
+                                {/* <button onClick={() => setRepCount(repcount - 1)}>+</button><button onClick={() => setRepCount(repcount + 1)}>-</button> */}
                             </td>
                             <td><button
                                 className="btn btn-outline-secondary btn-sm"
@@ -65,6 +83,6 @@ const ListExercise = () => {
 
 export default ListExercise;
 
-
+//JUST CHANGING STATE
 {/* <td>{ex.sets} sets<button onClick={() => setSetCount(setcount + 1)}>+</button><button onClick={() => setSetCount(setcount - 1)}>-</button></td>
 <td>{ex.reps} reps<button onClick={() => setRepCount(repcount - 1)}>+</button><button onClick={() => setRepCount(repcount + 1)}>-</button></td> */}

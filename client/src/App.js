@@ -32,14 +32,11 @@ class App extends React.Component {
 
   render() {
     return (
-      // <div>
-      //   <h1>Is it working</h1>
-      // </div>
       <div>
         <nav className='navbar navbar-default'>
           <ul>
             <li><a href='http://localhost:8080'>HOME</a></li>
-            <li><a href='http://localhost:8080'>ABOUT</a></li>
+            <li><a href='https://github.com/deedoodee/lavendrFitness2.0'>ABOUT</a></li>
           </ul>
         </nav>
         <h1 className='welcome'><p>Welcome to <strong className="wow"> lavendrFitness</strong></p></h1>
@@ -57,8 +54,6 @@ class App extends React.Component {
             <GenerateWorkout /> :
             null
           }
-          {/* < CustomWorkout />
-          <GenerateWorkout /> */}
           </div>
         </div>
       </div>

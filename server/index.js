@@ -18,7 +18,7 @@ app.post('/custom', async (req, res) => {
     }
 });
 
-///// random generator
+///// RANDOM GENERATOR
 app.get('/generate', async (req, res) => {
     try {
         const allExercises = await pool.query("SELECT * FROM generate ORDER BY random() LIMIT 15");
@@ -31,7 +31,7 @@ app.get('/generate', async (req, res) => {
 /////
 
 
-//GET ALL
+//GET 
 app.get('/custom', async (req, res) => {
     try {
         const allExercises = await pool.query("SELECT * FROM exercises");
@@ -41,7 +41,7 @@ app.get('/custom', async (req, res) => {
     }
 })
 
-//GET ONE
+//GET 
 app.get('/custom/:id', async (req, res) => {
     try {
         const { id } = req.params;

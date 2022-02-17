@@ -27,7 +27,7 @@ const InputExercise = () => {
         <Fragment>
             <form className="input-form" onSubmit={onSubmitForm}>
                 <div className="form-row inputer">
-                    <div className="col-7">
+                    <div className="col">
                         <input className="form-control" type="text" placeholder="exercise" value={description} onChange={e => setDescription(e.target.value)} />
                     </div>
                     <div className='col'>

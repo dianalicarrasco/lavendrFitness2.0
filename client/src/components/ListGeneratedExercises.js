@@ -22,7 +22,7 @@ const ListGeneratedExercises = () => {
     return (
         <Fragment>
             <h5> My Workout</h5>
-            <table className='table table-div'>
+            <table className='table table-div gen-table'>
                 <tbody>
                     {exercise.map(ex =>
                         <tr key={ex.exercise_id}>
