@@ -1,10 +1,13 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack')
 
-module.exports = {
+const config = {
+  // mode: "development",
+  entry: [('react-hot-loader/patch', "./src/index.js")],
   output: {
-    path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js',
+    path: path.resolve(__dirname, "build"),
+    filename: "bundle.js",
   },
   resolve: {
     modules: [path.join(__dirname, 'src'), 'node_modules'],
@@ -16,27 +19,32 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
+        use: "babel-loader",
+        // options: {
+        //   presets: ["@babel/preset-react"],
+        //   presets: ["@babel/preset-env"],
+        // }
+        exclude: /node_modules/
       },
       {
         test: /\.css$/,
         use: [
-          {
-            loader: 'style-loader',
-          },
-          {
-            loader: 'css-loader',
-          },
+          'style-loader',
+          'css-loader',
         ],
       },
     ],
   },
+  devServer: {
+    'static': {
+      directory: './build'
+    }
+  },
   plugins: [
     new HtmlWebPackPlugin({
-      template: './src/index.html',
+      template: "./src/index.html",
     }),
   ],
 };
+
+module.exports = config;

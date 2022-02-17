@@ -1,0 +1,111 @@
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+hmtl {
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: rgb(186, 144, 222);
+    display: flex;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 10px 0px;
+}
+
+.navbar li {
+    display: inline;
+    margin: 5px 15px 5px 15px;
+}
+
+.welcome {
+    display: flex;
+    justify-content: center;
+    color: black;
+    margin-top: 50px;
+}
+
+.wow:hover {
+    color: rgb(186, 144, 222); 
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+}
+
+.custom-btn {
+    border: rgb(194, 152, 196) 0.5px solid;
+    border-radius: 8px;
+    margin: 0px 5px 0px 5px;
+    font-size: 20px;
+    color: rgb(194, 152, 196)
+}
+
+.generate-btn {
+    border: rgb(194, 152, 196) 0.5px solid;
+    border-radius: 8px;
+    margin: 0px 5px 0px 5px;
+    font-size: 20px;
+    color: rgb(194, 152, 196)
+}
+
+.custom-btn:hover {
+    background-color:rgb(194, 152, 196);
+    border: rgb(194, 152, 196) 0.5px solid;
+    
+}
+
+.generate-btn:hover {
+    background-color: rgb(194, 152, 196);
+    border: rgb(194, 152, 196) 0.5px solid;
+}
+
+.input-form {
+   text-align: center;
+   margin-top: 50px;
+}
+
+.inputer {
+    display: flex;
+    padding: 0px 250px;
+}
+
+.addMe {
+    border:rgb(186, 144, 222) 0.5px solid;
+    background-color: rgb(186, 144, 222);
+    margin-top: 18px; 
+}
+
+.addMe:hover {
+    background-color: rgb(195, 160, 226);
+    color: white;
+    border: rgb(186, 144, 222) 0.5px solid;
+}
+
+.table-div {
+    display: flex;
+    justify-content: center;
+    padding: 20px 250px 20px 250px;
+}
+
+.table-div td {
+    padding: 15px 80px;
+}
+
+h5 {
+    font-weight: bolder;
+    color:rgb(186, 144, 222);
+    text-align: center;
+    margin-top: 50px
+}
