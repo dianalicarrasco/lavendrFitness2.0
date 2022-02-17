@@ -7,7 +7,6 @@ app.use(cors());
 
 app.use(express.json());
 
-// POST
 app.post('/custom', async (req, res) => {
     try {
         const { description, sets, reps } = req.body;
@@ -18,7 +17,6 @@ app.post('/custom', async (req, res) => {
     }
 });
 
-///// RANDOM GENERATOR
 app.get('/generate', async (req, res) => {
     try {
         const allExercises = await pool.query("SELECT * FROM generate ORDER BY random() LIMIT 15");
@@ -28,10 +26,6 @@ app.get('/generate', async (req, res) => {
     }
 })
 
-/////
-
-
-//GET 
 app.get('/custom', async (req, res) => {
     try {
         const allExercises = await pool.query("SELECT * FROM exercises");
@@ -41,7 +35,6 @@ app.get('/custom', async (req, res) => {
     }
 })
 
-//GET 
 app.get('/custom/:id', async (req, res) => {
     try {
         const { id } = req.params;
@@ -52,7 +45,6 @@ app.get('/custom/:id', async (req, res) => {
     }
 })
 
-//PUT
 app.put('/custom/:id', async (req, res) => {
     try {
         const { id } = req.params;
@@ -65,7 +57,6 @@ app.put('/custom/:id', async (req, res) => {
     }
 })
 
-//DELETE 
 app.delete("/custom/:id", async (req, res) => {
     try{
         const { id } = req.params;

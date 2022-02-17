@@ -27,14 +27,8 @@ const ListGeneratedExercises = () => {
                     {exercise.map(ex =>
                         <tr key={ex.exercise_id}>
                             <td>{ex.description} </td>
-                            <td>{ex.sets} sets
-                                {/* <ChangeSet ex={ex} /> */}
-                                {/* <ChangeValue></ChangeValue> */}
-                            </td>
-                            <td>{ex.reps} reps
-                                {/* <ChangeSet ex={ex}/> */}
-                                {/* <ChangeValue></ChangeValue> */}
-                            </td>
+                            <td>{ex.sets} sets</td>
+                            <td>{ex.reps} reps</td>
                             <td>
                                 <div class="form-check">
                                     <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."/>

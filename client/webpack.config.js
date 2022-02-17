@@ -3,7 +3,6 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack')
 
 const config = {
-  // mode: "development",
   entry: [('react-hot-loader/patch', "./src/index.js")],
   output: {
     path: path.resolve(__dirname, "build"),
@@ -20,10 +19,6 @@ const config = {
       {
         test: /\.(js|jsx)$/,
         use: "babel-loader",
-        // options: {
-        //   presets: ["@babel/preset-react"],
-        //   presets: ["@babel/preset-env"],
-        // }
         exclude: /node_modules/
       },
       {
