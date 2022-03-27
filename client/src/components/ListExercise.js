@@ -7,7 +7,7 @@ const ListExercise = () => {
 
     const deleteExercise = async (id) => {
         try {
-            const deleteExercise = await fetch(`http://localhost:3001/custom/${id}`, {
+            const deleteExercise = await fetch(`http://localhost:3002/custom/${id}`, {
                 method: "DELETE"
             })
             setExercise(exercise.filter(exercise => exercise.exercise_id !== id))
@@ -18,7 +18,7 @@ const ListExercise = () => {
 
     const getExercise = async () => {
         try {
-            const response = await fetch("http://localhost:3001/custom");
+            const response = await fetch("http://localhost:3002/custom");
             const jsonData = await response.json();
 
             setExercise(jsonData);
