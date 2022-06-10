@@ -13,7 +13,7 @@ app.post('/custom', async (req, res) => {
         const newExercise = await pool.query("INSERT INTO exercises (description, sets, reps) VALUES($1, $2, $3) RETURNING *", [description, sets, reps]);
         res.json(newExercise.rows[0]);
     } catch (err) {
-        console.log(err.message)
+        console.error(err.message)
     }
 });
 
@@ -22,7 +22,7 @@ app.get('/generate', async (req, res) => {
         const allExercises = await pool.query("SELECT * FROM generate ORDER BY random() LIMIT 15");
         res.json(allExercises.rows)
     } catch (err) {
-        console.log(err.message)
+        console.error(err.message)
     }
 })
 
@@ -31,7 +31,7 @@ app.get('/custom', async (req, res) => {
         const allExercises = await pool.query("SELECT * FROM exercises");
         res.json(allExercises.rows)
     } catch (err) {
-        console.log(err.message)
+        console.error(err.message)
     }
 })
 
@@ -41,7 +41,7 @@ app.get('/custom/:id', async (req, res) => {
         const exercise = await pool.query("SELECT * FROM exercises WHERE exercise_id = $1", [id]) 
         res.json(exercise.rows)
     } catch (err) {
-        console.log(err.message)
+        console.error(err.message)
     }
 })
 
@@ -53,7 +53,7 @@ app.put('/custom/:id', async (req, res) => {
         const updateRep = await pool.query("UPDATE exercises SET reps = $1 WHERE exercise_id = $2", [reps, id]);
         res.json("Excerise was updated")
     } catch (err) {
-        console.log(err.message)
+        console.error(err.message)
     }
 })
 
@@ -63,7 +63,7 @@ app.delete("/custom/:id", async (req, res) => {
         const deleteExercise = await pool.query("DELETE FROM exercises WHERE exercise_id = $1", [id]);
         res.json("Exercise was deleted")
     } catch (err) {
-        console.log(err.message);
+        console.erorr(err.message);
     }
 })
 
